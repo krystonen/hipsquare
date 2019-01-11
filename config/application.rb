@@ -8,6 +8,7 @@ require "rails"
   active_storage/engine
   action_cable/engine
   action_view/railtie
+  active_job/railtie
   sprockets/railtie
 ).each do |railtie|
   begin
