@@ -1,5 +1,6 @@
 <template>
   <div id="venue">
+    <h2 id="top10"> TOP 10 locations near you: </h2>
     <venue-item
       v-for="item in foursquare"
       v-bind:venue="item.venue"
@@ -13,8 +14,8 @@
     <div v-else id="location" class="bottom-container">
       <h2> <i class="fas fa-map-marked"></i>  My Coordinates </h2>
       <ul>
-      <li> latitude: {{location.lat}} </li>
-      <li> longitude: {{location.long}} </li>
+        <li> latitude: {{location.lat}} </li>
+        <li> longitude: {{location.long}} </li>
       </ul>
     </div>
   </div>
@@ -71,7 +72,7 @@ export default {
       .then((data) => {
         let array = data.response.groups[0].items.sort(() => .5 - Math.random());
         // let random = Math(random)
-        this.foursquare = array.slice(0,9)
+        this.foursquare = array.slice(0,10)
         this.loading = false;
       })
     }
