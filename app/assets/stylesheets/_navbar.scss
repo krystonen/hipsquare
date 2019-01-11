@@ -1,0 +1,26 @@
+.navbar {
+  height: 70px;
+  .fas {
+    font-size: 32px;
+    color: #FFC008;
+  }
+  padding: 0 40px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-item {
+  padding-right: 15px;
+}
+
+.navbar-link{
+  color: black;
+}
+.navbar-link:hover {
+  text-decoration: none;
+  color: #FFC008;
+}

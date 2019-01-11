@@ -1,3 +1,28 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#top10 {
+  margin-top: 30px;
+}
+
+.home-title-animated {
+    animation-name: pulse;
+    animation-duration: 3.5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    color: #FFC008;
+  }
+
+  50% {
+    color: black;
+  }
+}

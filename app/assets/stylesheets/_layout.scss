@@ -1,0 +1,51 @@
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+@import url('https://fonts.googleapis.com/css?family=Lato:700|Open+Sans');
+
+body, html {
+  margin: 0;
+}
+
+.application-container {
+  flex-grow: 1;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #dedede;
+  margin: 0;
+}
+
+.container {
+  max-width: 65% !important;
+}
+.main-container {
+  height: 70vh;
+  margin: 0 auto;
+}
+
+.bottom-container {
+  height: 175px;
+  margin: 40px auto;
+  background-color: #FFC008;
+  font-size: 24px;
+  color: white;
+  border-radius: 4px;
+  padding: 15px;
+  h2{
+    text-align: center;
+    padding: 5px 0;
+  }
+  li {
+    text-align: left;
+  }
+  .fas {
+    padding-right: 10px;
+  }
+}
+
+p {
+font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4 {
+ font-family:  'Lato', sans-serif !important;
+}
