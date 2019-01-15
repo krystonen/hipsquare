@@ -1,6 +1,7 @@
 <template>
   <div id="venue">
-    <h2 id="top10"> TOP 10 locations near you: </h2>
+    <h2 id="top10"> TOP 10 picks for you: </h2>
+    <button class="btn btn-warning btn-lg button-white" v-if="!loading" v-on:click="getLocation()"> Refresh</button>
     <venue-item
       v-for="item in foursquare"
       v-bind:venue="item.venue"
