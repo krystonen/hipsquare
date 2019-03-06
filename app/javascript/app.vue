@@ -1,24 +1,38 @@
 <template>
   <div id="venue">
-    <h2 id="top10"> TOP 10 picks for you: </h2>
-    <button class="btn btn-warning btn-lg button-white" v-if="!loading" v-on:click="getLocation()"> Refresh</button>
-    <venue-item
-      v-for="item in foursquare"
-      v-bind:venue="item.venue"
-      v-bind:key="item.id"
-    ></venue-item>
-    <h2 class="home-title-animated text-center" v-if="loading"> Loading...</h2>
-    <p class="home-title-animated text-center" v-if="locationDisabled"> <strong> Please enable your location </strong></p>
-    <div v-if="locationDisabled" id="location" class="bottom-container">
-       <h2> <i class="fas fa-map-marked"></i> My Coordinates  </h2>
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 id="top10"> TOP 10 picks for you: </h2>
+        <button class="btn btn-warning btn-lg button-white" v-if="!loading" v-on:click="getLocation()"> Refresh</button>
+      </div>
     </div>
-    <div v-else id="location" class="bottom-container">
-      <h2> <i class="fas fa-map-marked"></i>  My Coordinates </h2>
-      <ul>
-        <li> latitude: {{location.lat}} </li>
-        <li> longitude: {{location.long}} </li>
-      </ul>
+    <div class="row mt-3">
+      <div class="col-sm-12">
+      <venue-item
+        v-for="item in foursquare"
+        v-bind:venue="item.venue"
+        v-bind:key="item.id"
+      ></venue-item>
+      </div>
     </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="home-title-animated text-center" v-if="loading"> Loading...</h2>
+        <p class="home-title-animated text-center" v-if="locationDisabled"> <strong> Please enable your location </strong></p>
+      </div>
+      <div class="col-sm-12">
+        <div v-if="locationDisabled" id="location" class="card mt-3 mb-3 p-3">
+          <h2 class="text-center"> <i class="fas fa-map-marked"></i> My Coordinates  </h2>
+        </div>
+        <div v-else id="location" class="card card-location mt-3 mb-3 p-3">
+          <h2 class="text-center"> <i class="fas fa-map-marked"></i>  My Coordinates </h2>
+            <p class="card-text ml-3">  latitude: {{location.lat}} </p>
+            <p class="card-text ml-3"> longitude: {{location.long}} </p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 
